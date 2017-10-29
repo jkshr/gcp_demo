@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>Cloud Vision API demo</h1>
+    <form action="submit" method=post enctype=multipart/form-data>
+
+      <p><select name="type">
+        <option value="label detection">label detection</option>
+        <option value="face detection">face detection</option>
+        <option value="landmarks detection">landmark detection</option>
+        <option value="web">web</option>
+      </select></p>
+      <p><input type=file name=file>
+         <input type=submit value=Submit>
+    </form>
+<!--
+    <h1>results</h1>
+    <h2>{{ type }}</h2>
+    <ol>
+      {% for result in results %}
+        <li>{{ result.description }} ({{ result.score }})</li>
+      {% endfor %}
+    </ol>
+-->
+{% endblock %}
