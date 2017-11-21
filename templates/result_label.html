@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API response</title>
+  </head>
+  <body>
+      <h3>{{ type }} result</h3>
+
+      <ol>
+        {% for result in results %}
+          <li>{{ result.description }} ({{ (result.score * 100) }}&#37;)</li>
+        {% endfor %}
+      </ol>
+
+      <p>
+          <img src="{{ filepath }}" style="max-width: 70%">
+<!--        <img src="{{ path }}/{{ filename }}" style="max-width: 30%">   -->
+      </p>
+
+      <h5>{{ filepath }}</h5>
+
+      <button type="button" onclick="history.back()">back</button>
+<!--
+      <h2>{{data}}</h2>
+
+      <h2>QR image</h2>
+        <img src="{{qr_b64data}}" alt="{{qr_name}}" >
+
+      <h2>{{ type }}</h2>
+ -->
+
+  </body>
+</html>

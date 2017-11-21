@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API response</title>
+  </head>
+  <body>
+      <h1>results</h1>
+      <h2>{{ filename }}</h2>
+<!--
+      <h2>{{data}}</h2>
+
+      <h2>QR image</h2>
+        <img src="{{qr_b64data}}" alt="{{qr_name}}" >
+-->
+      <h2>{{ type }}</h2>
+      <ol>
+        {% for result in results %}
+          <li>{{ result.description }} ({{ (result.score * 100) }}&#37;) ({{ locations }})</li>
+        {% endfor %}
+      </ol>
+  </body>
+</html>

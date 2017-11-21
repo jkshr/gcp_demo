@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API response</title>
+  </head>
+  <body>
+      <h3>{{ type }} result</h3>
+
+      <ol>
+        {% for result in results %}
+          <li>{{ result.label }} : {{ result.value }}</li>
+        {% endfor %}
+      </ol>
+
+      <p>
+          <img src="{{ filepath }}" style="max-width: 70%">
+      </p>
+
+      <h5>{{ filepath }}</h5>
+
+      <button type="button" onclick="history.back()">back</button>
+
+  </body>
+</html>

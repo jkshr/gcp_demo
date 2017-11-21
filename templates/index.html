@@ -3,22 +3,19 @@
     <h1>Cloud Vision API demo</h1>
     <form action="submit" method=post enctype=multipart/form-data>
 
-      <p><select name="type">
-        <option value="label detection">label detection</option>
-        <option value="face detection">face detection</option>
-        <option value="landmarks detection">landmark detection</option>
-        <option value="web">web</option>
+      <p>Input your api key: <input type="key" name="key" /></p>
+
+      <p>Select type: <select name="type">
+        <option value="LABEL_DETECTION">label detection</option>
+        <option value="TEXT_DETECTION">text detection(OCR)</option>
+        <option value="FACE_DETECTION">face detection</option>
+<!--        <option value="LANDMARK_DETECTION">landmark detection</option>  -->
+        <option value="LOGO_DETECTION">logo detection</option>
+        <option value="SAFE_SEARCH_DETECTION">safe search detection</option>
+<!--        <option value="WEB_DETECTION">web detection</option>  -->
       </select></p>
-      <p><input type=file name=file>
-         <input type=submit value=Submit>
+      <p>
+         <input type="file" name="file">
+         <input type="submit" value="Submit">
     </form>
-<!--
-    <h1>results</h1>
-    <h2>{{ type }}</h2>
-    <ol>
-      {% for result in results %}
-        <li>{{ result.description }} ({{ result.score }})</li>
-      {% endfor %}
-    </ol>
--->
 {% endblock %}
